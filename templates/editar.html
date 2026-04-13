@@ -6,8 +6,37 @@
     <title>Edição de Questões</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-</head>
 <body>
-    
+
+    <h1>Editar Questão</h1>
+
+    <form method="POST">
+
+        <label>Pergunta:</label><br>
+        <input type="text" name="pergunta" value="{{ questao.pergunta }}"><br><br>
+
+        <label>Alternativa 1:</label><br>
+        <input type="text" name="alt1" value="{{ questao.alt1 }}"><br><br>
+
+        <label>Alternativa 2:</label><br>
+        <input type="text" name="alt2" value="{{ questao.alt2 }}"><br><br>
+
+        <label>Alternativa 3:</label><br>
+        <input type="text" name="alt3" value="{{ questao.alt3 }}"><br><br>
+
+        <label>Correta:</label><br>
+        <select name="correta">
+            <option value="alt1">Alternativa 1</option>
+            <option value="alt2">Alternativa 2</option>
+            <option value="alt3">Alternativa 3</option>
+        </select><br><br>
+
+        <button type="submit">Atualizar</button>
+
+    </form>
+
+    <br>
+    <a href="/">Voltar</a>
+
 </body>
 </html>
